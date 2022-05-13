@@ -13,6 +13,7 @@
 		4D28EBE2282E8B0A007B1FFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D28EBE0282E8B0A007B1FFD /* Main.storyboard */; };
 		4D28EBE4282E8B0D007B1FFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D28EBE3282E8B0D007B1FFD /* Assets.xcassets */; };
 		4D28EBE7282E8B0D007B1FFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D28EBE5282E8B0D007B1FFD /* LaunchScreen.storyboard */; };
+		4D28EBF1282E8F2F007B1FFD /* softgames.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D28EBF0282E8F2F007B1FFD /* softgames.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4D28EBE3282E8B0D007B1FFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D28EBE6282E8B0D007B1FFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D28EBE8282E8B0D007B1FFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D28EBF0282E8F2F007B1FFD /* softgames.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = softgames.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		4D28EBD9282E8B0A007B1FFD /* Softgames@Test */ = {
 			isa = PBXGroup;
 			children = (
+				4D28EBEF282E8D07007B1FFD /* WebView */,
 				4D28EBDA282E8B0A007B1FFD /* AppDelegate.swift */,
 				4D28EBDC282E8B0A007B1FFD /* SceneDelegate.swift */,
 				4D28EBDE282E8B0A007B1FFD /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				4D28EBE8282E8B0D007B1FFD /* Info.plist */,
 			);
 			path = "Softgames@Test";
+			sourceTree = "<group>";
+		};
+		4D28EBEF282E8D07007B1FFD /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				4D28EBF0282E8F2F007B1FFD /* softgames.html */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +138,7 @@
 			files = (
 				4D28EBE7282E8B0D007B1FFD /* LaunchScreen.storyboard in Resources */,
 				4D28EBE4282E8B0D007B1FFD /* Assets.xcassets in Resources */,
+				4D28EBF1282E8F2F007B1FFD /* softgames.html in Resources */,
 				4D28EBE2282E8B0A007B1FFD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
