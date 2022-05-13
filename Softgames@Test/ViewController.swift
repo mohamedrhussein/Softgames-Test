@@ -84,7 +84,13 @@ class ViewController: UIViewController,UNUserNotificationCenterDelegate {
     
     // Create NotifyMe Button Action with delay 7 seconds
     private func notifyMeFromHtml(){
+        
+        // The notification should be displayed.
         self.sendLocalNotification(title: "Solitaire smash", body: "Play again to smash your top score")
+        
+        // Close the app.
+        
+        // exit(0)
     }
     
     // Request Permission to recive local notification
