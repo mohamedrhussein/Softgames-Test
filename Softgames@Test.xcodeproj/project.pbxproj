@@ -58,10 +58,10 @@
 		4D28EBD9282E8B0A007B1FFD /* Softgames@Test */ = {
 			isa = PBXGroup;
 			children = (
-				4D28EBEF282E8D07007B1FFD /* WebView */,
 				4D28EBDA282E8B0A007B1FFD /* AppDelegate.swift */,
 				4D28EBDC282E8B0A007B1FFD /* SceneDelegate.swift */,
 				4D28EBDE282E8B0A007B1FFD /* ViewController.swift */,
+				4D28EBEF282E8D07007B1FFD /* WebView */,
 				4D28EBE0282E8B0A007B1FFD /* Main.storyboard */,
 				4D28EBE3282E8B0D007B1FFD /* Assets.xcassets */,
 				4D28EBE5282E8B0D007B1FFD /* LaunchScreen.storyboard */,
