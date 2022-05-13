@@ -7,19 +7,30 @@
 
 import UIKit
 import WebKit
+import UserNotifications
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UNUserNotificationCenterDelegate {
     
     // Outlet
     @IBOutlet weak var webView: WKWebView!
+    
+    // Variable
+    let userNotificationCenter = UNUserNotificationCenter.current()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.loadHtmlFile()
         
+        // Assing self delegate on userNotificationCenter
+        self.userNotificationCenter.delegate = self
+        self.requestLocalNotificationAuthorization()
+        //self.sendLocalNotification(title: "Solitaire smash", body: "Play again to smash your top score")
+        
         // Do any additional setup after loading the view.
     }
+    
+    /* Task 1: WebView to Swift communication */
     
     // Load Html File
     private func loadHtmlFile(){
@@ -68,5 +79,48 @@ class ViewController: UIViewController {
             
         }
     }
+    
+    /* Task 2: Local Notifications */
+    
+    // Create NotifyMe Button Action with delay 7 seconds
+    private func notifyMeFromHtml(){
+        self.sendLocalNotification(title: "Solitaire smash", body: "Play again to smash your top score")
+    }
+    
+    // Request Permission to recive local notification
+    func requestLocalNotificationAuthorization() {
+        let authOptions = UNAuthorizationOptions.init(arrayLiteral: .alert, .badge, .sound)
+        
+        self.userNotificationCenter.requestAuthorization(options: authOptions) { (success, error) in
+            if let error = error {
+                print("Error: ", error)
+            }
+        }
+    }
+    
+    // Send Local Nofifcation
+    func sendLocalNotification(title: String,body: String) {
+        // Create new notifcation content instance
+        let notificationContent = UNMutableNotificationContent()
+        
+        // Add the content to the notification content
+        notificationContent.title = "\(title)"
+        notificationContent.body = "\(body)"
+        notificationContent.badge = NSNumber(value: 1)
+        
+        // call this trigger after 7 seconds
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 7,
+                                                        repeats: false)
+        let request = UNNotificationRequest(identifier: "softNotification",
+                                            content: notificationContent,
+                                            trigger: trigger)
+        
+        userNotificationCenter.add(request) { (error) in
+            if let error = error {
+                print("Notification Error: ", error)
+            }
+        }
+    }
+    
 }
 
