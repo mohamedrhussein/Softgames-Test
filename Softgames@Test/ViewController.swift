@@ -43,9 +43,30 @@ class ViewController: UIViewController {
     
     // Create Sync Button Action
     // Recive Name Concate First and Last and Pass it to Html File
+    private func getNameFromHtml(fName: String,lName: String){
+        DispatchQueue.main.sync {
+            
+        }
+    }
     
+    private func passFullNameToHtml(fName: String,lName: String){
+        DispatchQueue.main.sync {
+            
+        }
+    }
     
     // Create Async Button Action with delay 5 seconds
     // Recive DateOfBirth and Pass it to Html File after delay
+    private func getDateOfBirthFromHtml(dateOfBirth: String){
+        DispatchQueue.main.async {
+            
+        }
+    }
+    
+    private func passDateOfBirthToHtml(dateOfBirth: String){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            
+        }
+    }
 }
 
